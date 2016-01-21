@@ -8,9 +8,36 @@
   width:120px;
   background:url(/data/ID.png) no-repeat left center;
 }
+
 #business-infos{
   padding: 0 15px 0 15px;
 }
+
 .icon-line>.material-icons{
   vertical-align: middle;
+}
+.skills{
+  display:block;
+}
+.skill{
+  width:100%;
+  clear:both;
+}
+
+.skill-date{
+  float:left;
+  width:100px;
+  padding:10px 20px 10px 20px;
+  background-color:blue;
+  color:white;
+  font-weight:bold;
+}
+.skill-main{
+  width:auto;
+  float:left;
+  padding: 5px 10px 5px 20px;
+  margin-right:auto;
+}
+.skill-title{
+  font-size:1.2em;
 }
