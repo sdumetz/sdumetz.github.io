@@ -10,6 +10,13 @@ h4{
   color: #009688;
   margin:0;
 }
+.footer{
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  background-color:#3F51B5;
+}
 #business-card{
   display:flex;
   align-items: stretch;
@@ -80,4 +87,25 @@ h4{
 }
 .skill-progress{
   stroke:#009688;
+}
+.rs div{
+  background-repeat: no-repeat;
+  background-size: 24px 48px;
+  background-position: 0px 0px;
+  transition: 200ms;
+  transition-timing-function: ease-out;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  float: left;
+  margin-right: 3px;
+}
+.rs div:hover{
+  background-position: 0px -24px;
+}
+.rs div.twitter{
+  background-image:url("/data/sprite-twitter.png");
+}
+.rs div.github{
+  background-image:url("/data/sprite-github.png");
 }
