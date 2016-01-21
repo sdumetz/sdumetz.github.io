@@ -28,11 +28,11 @@ h4{
 .icon-line>.material-icons{
   vertical-align: middle;
 }
-.skills{
+.events{
   display:block;
 }
 
-.skill-line{
+.event-line{
   width:100%;
   display:flex;
   align-items: stretch;
@@ -40,7 +40,7 @@ h4{
   padding:10px 0 0 0;
 }
 
-.skill-date{
+.event-date{
   width:10%;
   min-width:100px;
   padding:15px 20px 15px 20px;
@@ -51,17 +51,30 @@ h4{
   text-align:right;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
-.skill-separator{
+.event-separator{
   padding:15px 5px 15px 10px;
   color:#009688;
   align-self: center;
 }
-.skill-main{
+.event-main{
   width:80%;
   padding: 5px 10px 5px 10px;
 }
-.skill-title{
+.event-title{
   display:block;
   font-size:1.2em;
   color:#009688;
+}
+.skills{
+  padding:15px 20px 15px 20px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.skill{
+  padding:5px 0 0 0;
+}
+.skill-name{
+  font-weight:bold;
+}
+.skill-progress{
+  stroke:#009688;
 }
