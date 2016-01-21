@@ -1,0 +1,16 @@
+#business-card{
+  display:flex;
+  align-items: stretch;
+}
+
+#business-picture{
+  margin-left: auto;
+  width:120px;
+  background:url(/data/ID.png) no-repeat left center;
+}
+#business-infos{
+  padding: 0 15px 0 15px;
+}
+.icon-line>.material-icons{
+  vertical-align: middle;
+}
