@@ -18,6 +18,9 @@ h4{
   background-color:#3F51B5;
   color:white;
 }
+.footer a{
+  color:white;
+}
 #business-card{
   display:flex;
   align-items: stretch;
