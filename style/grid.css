@@ -1,0 +1,23 @@
+.grid{
+  display:flex;
+  flex-flow: row wrap;
+  flex-direction:row;
+}
+.cell{
+
+}
+.cell-40{
+  width:40%;
+}
+.cell-20 {
+  width:20%;
+}
+.cell-33{
+  width:33.3%;
+}
+.cell-33:nth-child(2){
+  width:33.4%;
+}
+.cell-25{
+  width:25%;
+}

@@ -11,9 +11,8 @@ h4{
   margin:0;
 }
 .footer{
-  position:absolute;
-  bottom:0px;
-  left:0px;
+  margin-top:25px;
+  padding:15px 0 15px 0;
   width:100%;
   background-color:#3F51B5;
   color:white;
@@ -22,7 +21,7 @@ h4{
   color:white;
 }
 .main-content{
-  padding-bottom:50px;
+  padding: 0 15px 0 15px;
 }
 #business-card{
   display:flex;
@@ -116,12 +115,8 @@ h4{
 .rs div.github{
   background-image:url("/data/sprite-github.png");
 }
-.keys .content{
-  display:flex;
-  flex-wrap: wrap;
-}
+
 .key{
-  width:50%;
   background: #3F51B5;
 }
 .mdl-card__actions {
