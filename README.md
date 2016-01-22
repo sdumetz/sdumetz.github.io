@@ -18,4 +18,5 @@ Currently used bleeding edge features :
 
 ## TODO
 
-Replace font-icons by inline svg. [because it's not-so-good](http://blog.cloudfour.com/seriously-dont-use-icon-fonts/).
+- Replace font-icons by inline svg. [because it's not-so-good](http://blog.cloudfour.com/seriously-dont-use-icon-fonts/).
+- Optimize Images : resolution, quality and compression

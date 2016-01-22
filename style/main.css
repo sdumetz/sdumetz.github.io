@@ -15,7 +15,6 @@ h4{
 .footer{
   margin-top:25px;
   padding:15px 0 15px 0;
-  width:100%;
   background-color:#3F51B5;
   color:white;
 }
@@ -125,10 +124,13 @@ h4{
 
 .key{
   background: #3F51B5;
-
+  width:25px;
+  height:150px;
+  flex-grow:1;
 }
 .key-panel{
   border-radius: 2px;
+  width:75%;
   display:flex;
   flex-flow: row-reverse;
   justify-content:space-between;
@@ -153,8 +155,12 @@ h4{
   width:100%;
 }
 .mdl-card__actions {
+  position:relative;
+  margin-top:100px;
   padding: 5px;
   height:40px;
+  bottom:0px;
+  left:0px;
   color:white;
   font-size:1.1em;
   background: rgba(0, 0, 0, 0.3);
