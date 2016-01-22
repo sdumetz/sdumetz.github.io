@@ -32,6 +32,7 @@ h4{
 #business-card{
   display:flex;
   align-items: stretch;
+  padding-top:15px;
 }
 
 #business-picture{
@@ -176,6 +177,9 @@ h4{
   color:#3F51B5;
   font-weight:bold;
   text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+.textblock{
+  padding-right: 10px;
 }
 .textblock-icon{
   float:left;
