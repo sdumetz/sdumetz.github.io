@@ -11,6 +11,7 @@ Currently used bleeding edge features :
   - classes (chrome 42, gg 45, MS Edge 13, Safari 9.0)
   - imports (Not Supported)
   - arrow functions (chrome 45, Firefox 22, opera 32)
+  - for...of (firefox 13, MS Edge 12 Opera 25 Safari 7.1)
 - HTML
   - imports (easily polyfilled. Not important.)
 

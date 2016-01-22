@@ -3,6 +3,7 @@ Colors :
   Teal : #009688
   Indigo : #3F51B5
 */
+
 h3{
   color: #3F51B5;
 }
@@ -23,6 +24,11 @@ h4{
 .main-content{
   padding: 0 15px 0 15px;
 }
+
+.in{
+  display:none;
+}
+
 #business-card{
   display:flex;
   align-items: stretch;
@@ -118,13 +124,42 @@ h4{
 
 .key{
   background: #3F51B5;
+
+}
+.key-panel{
+  border-radius: 2px;
+  display:flex;
+  flex-flow: row-reverse;
+  justify-content:space-between;
+  align-content: stretch;
+  flex-wrap:nowrap;
+  padding:0px;
+}
+.key-text{
+  padding:10px;
+}
+.key-close{
+  display:flex;
+  align-self: stretch;
+  background: #009688;
+  padding:5px;
+  border-radius:2px;
+  cursor:pointer;
+}
+.key-close>i{
+  align-self:center;
+  color:#3F51B5;
+  width:100%;
 }
 .mdl-card__actions {
   padding: 5px;
-  height:75px;
+  height:40px;
   color:white;
-  background: rgba(0, 0, 0, 0.5);
+  font-size:1.1em;
+  background: rgba(0, 0, 0, 0.3);
+  cursor:pointer;
 }
+
 .mdl-card__title {
   align-items: flex-start;
 }
