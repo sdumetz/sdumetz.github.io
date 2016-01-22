@@ -18,4 +18,4 @@ Currently used bleeding edge features :
 
 ## TODO
 
-rebuild webcomponents to only have the html import polyfill
+Replace font-icons by inline svg. [because it's not-so-good](http://blog.cloudfour.com/seriously-dont-use-icon-fonts/).

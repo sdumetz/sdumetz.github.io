@@ -1,7 +1,6 @@
 .grid{
   display:flex;
   flex-flow: row wrap;
-  flex-direction:row;
 }
 .cell{
 
@@ -23,4 +22,41 @@
 }
 .cell-75{
   width:75%;
+}
+.cell-100{
+  width:100%;
+}
+@media (max-width:1200px){
+  .cell-m-50{
+   width:50%;
+  }
+  .cell-m-100{
+    width:100%;
+  }
+  .cell-m-33{
+    width:33.3%;
+  }
+  .cell-m-33:nth-child(2){
+    width:33.4%;
+  }
+  .cell-m-66:{
+    width:66.6%;
+  }
+}
+@media (max-width:840px) {
+  .cell-s-50{
+   width:50%;
+  }
+  .cell-s-100{
+    width:100%;
+  }
+  .cell-s-33{
+    width:33.3%;
+  }
+  .cell-s-33:nth-child(2){
+    width:33.4%;
+  }
+  .cell-s-66:{
+    width:66.6%;
+  }
 }
