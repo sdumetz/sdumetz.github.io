@@ -18,9 +18,6 @@
   },
   "homepage": "https://github.com/sdumetz/sdumetz.github.io#readme",
   "devDependencies": {
-    "metalsmith": "^2.1.0"
-  },
-  "dependencies": {
     "http-server": "^0.8.5"
   }
 }
