@@ -17,6 +17,9 @@ h4{
   margin:0;
   padding-top:15px;
 }
+a{
+  color:#FF5722;
+}
 .footer{
   margin-top:25px;
   padding:15px 0 15px 0;
@@ -43,7 +46,7 @@ h4{
 #business-picture{
   margin-left: auto;
   width:120px;
-  background:url(/data/ID.png) no-repeat left center;
+  background:url('/data/ID.png') no-repeat center / cover;
 }
 
 #business-infos{
@@ -52,6 +55,7 @@ h4{
 
 .icon-line>.material-icons{
   vertical-align: middle;
+  color:#FF5722;
 }
 .box{
   padding:15px 20px 15px 20px;
