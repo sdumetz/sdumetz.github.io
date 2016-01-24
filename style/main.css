@@ -121,12 +121,7 @@ h4{
 .rs div:hover{
   background-position: 0px -24px;
 }
-.rs div.twitter{
-  background-image:url("/data/sprite-twitter.png");
-}
-.rs div.github{
-  background-image:url("/data/sprite-github.png");
-}
+
 
 .key{
   background: #FF5722;
