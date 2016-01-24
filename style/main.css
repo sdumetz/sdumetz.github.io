@@ -20,6 +20,9 @@ h4{
 a{
   color:#FF5722;
 }
+.print-only{
+  display:none;
+}
 .footer{
   margin-top:25px;
   padding:15px 0 15px 0;
@@ -75,7 +78,7 @@ a{
 
 .event-date{
   width:10%;
-  min-width:100px;
+  min-width:80px;
   padding:15px 20px 15px 20px;
   background-color:#FF5252;
   color:white;

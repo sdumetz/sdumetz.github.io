@@ -1,0 +1,9 @@
+.print-only{
+  display:initial;
+}
+.event-separator{
+  padding:15px 0px 15px 2px;
+}
+#business-card{
+  padding-top:0;
+}
