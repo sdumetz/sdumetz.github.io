@@ -1,9 +1,31 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+html, body {
+  width: 210mm;
+  height: 297mm;
+}
+h4{
+  margin-top:0;
+}
 .print-only{
   display:initial;
 }
 .event-separator{
   padding:15px 0px 15px 2px;
 }
+.event-line{
+  padding-top: 0;
+}
 #business-card{
   padding-top:0;
+}
+
+.key{
+  height:100px;
+}
+.mdl-card__actions {
+  margin-top:50px;
+
 }
