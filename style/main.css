@@ -152,7 +152,7 @@ a{
 }
 .mdl-card{
   background: #FF5722;
-  width:25px;
+  width:100px;
   height:150px;
   flex-grow:1;
 }
