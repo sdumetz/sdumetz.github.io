@@ -4,7 +4,8 @@
   "description": "Sebastien Dumetz - Interactive Resume",
   "main": "index.js",
   "scripts": {
-    "start":"http-server .",
+    "start": "webpack-dev-server",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,9 @@
   },
   "homepage": "https://github.com/sdumetz/sdumetz.github.io#readme",
   "devDependencies": {
-    "http-server": "^0.8.5"
+    "traceur": "0.0.105",
+    "traceur-loader": "^0.6.3",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   }
 }
