@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sebastien Dumetz">
+    {% include scripts.html %}
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--no-desktop-drawer-button">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Sebastien Dumetz</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="/resume">Resume</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Sebastien Dumetz</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Resume</a>
+        </nav>
+      </div>
+      {{content}}
+      <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">Sebastien Dumetz 2015 - 2016</div>
+            <ul class="mdl-mini-footer__link-list">
+              <li>All content is under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC. Attribution ShareAlike</a></li>
+           </ul>
+         </div>
+
+         <div class="cell" style="width:200px;flex-grow:1;text-align:center;font-weight:bold"></div>
+         <div class="cell" style="width:300px;flex-grow:3" >
+
+         </div>
+       </footer>
+    </div>
+
+  </body>
+</html>

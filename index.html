@@ -1,55 +1,8 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Sebastien Dumetz">
-    <script src="/vendor/HTMLImports.min.js"></script>
-    <link rel="import" href="imports/scripts.html">
-  </head>
-  <body><div class="content">
-    <div class="grid">
-      <div class="cell" style="width:200px;flex-grow:1">
-        <h1>Sebastien Dumetz</h1>
-        <h3>CTO - Polyvalent Technical manager</h3>
-        <div class="print-only">View Me online at : <a href="http://sdumetz.github.io">sdumetz.github.io</a></div>
-      </div>
-      <div class="cell" style="width:380px;flex-grow:1;align-self:flex-end" >
-        <div id="business-card">
-          <div id="business-picture" class="box"></div>
-          <div id="business-infos">
-            <div class="icon-line"><span class="material-icons">perm_identity</span> Sebastien Dumetz</div>
-            <div class="icon-line"><span class="material-icons">home</span>135/301 Rue de Douai</div>
-            <div class="icon-line"><span class="material-icons">business</span>59000 Lille</div>
-            <div class="icon-line"><span class="material-icons">contact_phone</span> +33673804459</div>
-            <div class="icon-line"><span class="material-icons">email</span>dsebastien90@gmail.com</div>
-            <div class="icon-line"><span class="material-icons">flight_takeoff</span>Available Worldwide</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="grid main-content">
-      <div id="exp" class="cell" style="width:500px;flex-grow:4">
-      </div>
-      <div class="cell" style="width:300px;flex-grow:1">
-        <div class="grid">
-          <div id="about" class="cell" style="width:50%;flex-grow:1;flex-shrink:0"></div>
-          <div class="cell" style="width:260px;flex-grow:1;flex-shrink:0">
-            <div id="languages" ></div>
-            <div id="skills"></div>
-          </div>
-        </div>
-      </div>
-      <div class="cell" style="width:500px;flex-grow:3">
-        <div id="keyprojects"></div>
-        <div id="hobbies"></div>
-      </div>
-    </div>
-    <div class='grid footer'>
-      <div class="cell" style="width:200px;flex-grow:3" id="social"></div>
-      <div class="cell" style="width:200px;flex-grow:1;text-align:center;font-weight:bold">Sebastien Dumetz 2015</div>
-      <div class="cell" style="width:300px;flex-grow:3" >
-        All content is under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC. Attribution ShareAlike</a>
-      </div>
-    </div>
-  </div></body>
-</html>
+---
+layout: front
+title: Sebastien Dumetz
+---
+
+{% for post in site.posts limit: 4 %}
+    {% include post_abstract.html content=post %}
+{% endfor %}

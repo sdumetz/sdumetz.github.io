@@ -1,0 +1,15 @@
+lsi: false
+source: .
+exclude:
+  - node_modules
+  - src
+highlighter: rouge
+gems:
+  - jekyll-sitemap
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "front"
