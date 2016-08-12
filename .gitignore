@@ -34,3 +34,4 @@ node_modules
 
 #jekyll artifacts
 _site/
+Gemfile.lock
