@@ -3,17 +3,59 @@ Colors :
   Main : #FF5722
   Accent : #FF5252
 */
-body{
-  font-family:"Roboto","Helvetica","Arial",sans-serif
+html, body{
+  font-family:"Roboto","Helvetica","Arial",sans-serif;
+  min-height:100%;
+  margin:0;
+
+}
+.navbar{
+  background: url('/data/header.jpg') center / cover;
+  max-height:200px;
+}
+.navbar .mdl-layout__header,
+.navbar .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+.ribbon{
+  height:40vh;
+  flex-shrink:0;
+  background-color: #3F51B5;
+  background: url("/data/header.jpg") center/cover;
+}
+.main-content{
+  margin-top:-35vh;
+  overflow:initial!important;
+}
+.site-content{
+  padding:10px;
+}
+.card-wide > .mdl-card__title {
+  color: #333;
+  height: 176px;
+}
+.card-title{
+  display:flex;
+  align-content:stretch;
+  width:100%;
+}
+.card-title-text{
+  align-self:flex-start;
+  flex-grow:1;
+}
+.card-title-more {
+  align-self:flex-end;
 }
 @media (min-width:1200px){
-  .content{
+  .resume-content{
     display:flex;
     flex-direction: column;
     align-items: center;
 
   }
-  .content>div.grid{
+  .resume-content>div.grid{
     width:1200px;
      margin: auto;
   }
