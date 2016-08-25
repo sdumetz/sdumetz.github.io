@@ -4,6 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Sebastien Dumetz">
+    {% if page.title %}
+      <title>{{page.title}}</title>
+      <meta property="og:title" content="{{page.title}}"/>
+      {% if page.excerpt %}
+        <meta name=”description” content="{{page.excerpt | strip_html | truncatewords:155}}">
+        <meta property="og:description" content="{{page.excerpt | strip_html | truncatewords:297}}"/>
+        <meta property="og:type" content=”article”/>
+      {% else %}
+        <meta name="description" content="{{page.title}}">
+      {% endif %}
+    {% endif %}
+    {% if page.image %}
+      <meta name="twitter:image" content="{{site.url}}/{{page.image}}">
+      <meta property="og:image" content="{{site.url}}/{{page.image}}"/>
+    {% endif %}
+    {% include scripts.html %}
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--no-desktop-drawer-button">
