@@ -1,4 +1,5 @@
 lsi: false
+url: https://sdumetz.github.io
 source: .
 exclude:
   - node_modules
