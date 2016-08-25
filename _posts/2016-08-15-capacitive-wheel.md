@@ -1,7 +1,7 @@
 ---
 title: Large capacitive wheel design
 ---
-I've found myself in need of a large sliding sensor. Many solutions exists for small sizes, including ipod's great capacitive wheel (or [DIY ones](https://bryanduxbury.com/2013/12/05/designing-a-capacitive-touch-wheel-in-openscad-and-eagle/)). However, when it comes to large size sensors, I found myself in lack of good references. Here is how I made a 15cm wide capacitive touch wheel.
+I've found myself in need of a large sliding sensor. Many solutions exists for small sizes, inspired from ipod's great capacitive wheel ([DIY ones](https://bryanduxbury.com/2013/12/05/designing-a-capacitive-touch-wheel-in-openscad-and-eagle/)). However, when it comes to large size sensors, I found myself in lack of good references. Here is how I made a 15cm wide capacitive touch wheel.
 
 ### Materials
 
