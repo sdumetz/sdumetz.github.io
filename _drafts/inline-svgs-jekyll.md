@@ -2,6 +2,21 @@
 title: inline SVG files with Jekyll.
 ---
 
+I love jekyll. I think it's the right balance between providing good authoring and reusability tools and getting in the way of creativity with a bloated structure (looking at you, drupal!).
+
+However while it's module ecosystem is growing, it still lacks some maturity. I've had some difficulties trying to integrate SVG icons in my static site and thought I would share my method here.
+
+To get SVG icons in your website, you got some alternatives:
+
+- font icons : deserve their [death warrant](https://speakerdeck.com/ninjanails/death-to-icon-fonts) **AND** complicated to make.
+- use img tags (with SVG/PNG/JPG) : unstylable, lots of requests
+- inline SVG.
+
+The choice is difficult and need to be ponderated... Just kidding, let's embed SVG.
+
+Here's a minimal code snippet that takes a svg, optimize it and inline it in your html. It lacks some polish, especially options support, but it works perfectly.
+
+**Note** : Optimization is strictly optionnal, just drop the *svg_optimizer* require, remove the *Optimize()* call and you're free to go.
 
 {% highlight ruby %}
 require 'svg_optimizer'
