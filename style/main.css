@@ -9,12 +9,8 @@ html, body{
   margin:0;
 
 }
-.navbar{
-  background: url('/data/header.jpg') center / cover;
-  max-height:200px;
-}
-.navbar .mdl-layout__header,
-.navbar .mdl-layout__drawer-button {
+
+.navbar .mdl-layout__header, .mdl-layout__drawer-button >.material-icons {
   /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
   color: white;

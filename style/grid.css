@@ -4,3 +4,13 @@
 }
 .cell{
 }
+#site-content{
+  padding:5px 15px 5px 15px;
+}
+@media (min-width: 839px)and (max-width: 1200px) {
+  #site-content{
+    margin-left: 8px;
+    width:83%;
+    width:calc(83% - 16px);
+  }
+}
