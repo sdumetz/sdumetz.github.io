@@ -2,14 +2,7 @@
 layout: front
 title: Blog Posts
 ---
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--10-col">
-    <h3> Archives</h3>
-    {% for post in site.posts limit: 4 %}
-        {% include post_abstract.html content=post %}
-    {% endfor %}
-  </div>
-  <div class="mdl-cell mdl-cell--2-col">
-    {% include image_card.html image="/data/focus.jpg" alt="holusion focus"  text='<b>About Me</b> :<br>Product Manager co-founder of <a href="http://holusion.com">Holusion</a>.' %}
-  </div>
-</div>
+
+{% for post in site.posts limit: 4 %}
+    {% include post_abstract.html content=post %}
+{% endfor %}
