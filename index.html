@@ -3,6 +3,6 @@ layout: front
 title: Blog Posts
 ---
 
-{% for post in site.posts limit: 4 %}
+{% for post in site.posts %}
     {% include post_abstract.html content=post %}
 {% endfor %}
