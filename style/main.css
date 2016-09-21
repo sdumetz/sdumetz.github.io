@@ -9,7 +9,32 @@ html, body{
   margin:0;
 
 }
+/* Main layout setup */
+.container{
+  display:flex;
+  max-width:1200px;
+  margin:auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.content  {
+  padding:10px 10px 10px 0px;
+}
+.content:first-child{
+  padding-left:10px;
+}
 
+.content-main{
+  flex-grow:10;
+  width:600px;
+}
+.content-drawer  {
+  flex-grow:1;
+  width:300px;
+}
+.content-drawer>div{
+  padding:10px;
+}
 .navbar .mdl-layout__header, .mdl-layout__drawer-button >.material-icons {
   /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
@@ -21,13 +46,12 @@ html, body{
   background-color: #3F51B5;
   background: url("/data/header.jpg") center/cover;
 }
-.main-content{
+.site-content{
   margin-top:-35vh;
   overflow:initial!important;
 }
-.site-content{
-  padding:10px;
-}
+
+/* images cards */
 .mdl-card.image-card{
   margin:auto;
   width:auto;
@@ -51,6 +75,7 @@ html, body{
 .image-card .mdl-card__supporting-text{
   background-color:rgba(255,255,255,0.8);
 }
+/* Posts abstracts */
 .post-title{
   display:flex;
   align-content:stretch;
@@ -76,9 +101,9 @@ html, body{
      margin: auto;
   }
 }
-
+/* Right side Drawer */
 .drawer-list-item{
-  padding: 10px;
+  padding: 5px;
 }
 
 h1{
