@@ -59,6 +59,7 @@ html, body{
 .post-title-text{
   align-self:flex-start;
   flex-grow:1;
+  color:rgb(83,109,254);
 }
 .post-title-more {
   align-self:flex-end;
@@ -76,11 +77,18 @@ html, body{
   }
 }
 
+.drawer-list-item{
+  padding: 10px;
+}
+
 h1{
-  color:#FF5722;
+  color:rgb(33,150,243);
+}
+h2{
+  color:rgb(83,109,254);
 }
 h3{
-  color: #FF5252;
+  color: rgb(33,150,243);
 }
 h4{
   color: #FF5252;

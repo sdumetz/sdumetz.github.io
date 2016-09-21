@@ -1,0 +1,11 @@
+<li class="drawer-list-item mdl-list__item">
+  <span class="mdl-list__item-primary-content" id="{{include.title | uri_escape }}">
+    <a href="{{include.href}}">
+      <i class="material-icons mdl-list__item-icon">{{include.icon}}</i>
+    </a>
+      {{include.title}}
+  </span>
+  <div class="mdl-tooltip" data-mdl-for="{{include.title | uri_escape }}">
+    {{include.tooltip}}
+  </div>
+</li>

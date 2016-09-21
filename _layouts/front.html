@@ -5,18 +5,52 @@ layout: default
 </div>
 <main class="mdl-layout__content main-content">
   <div class="container mdl-grid">
-    <div id="site-content" class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--2-offset-desktop mdl-cell--6-col mdl-cell--8-col-tablet">
+    <div id="site-content" class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--2-offset-desktop mdl-cell--6-col">
       <h1 style="text-align:center">{{page.title}}</h1>
       {{content}}
     </div>
-    <div class=" site-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--2-col mdl-cell--top">
+    <div class=" site-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--2-col mdl-cell--6-col-phone mdl-cell--top">
       <div>
-        <span class="mdl-chip mdl-chip--contact mdl-chip--deletable">
-          <img class="mdl-chip__contact" src="/data/ID.png"></img>
-          <span class="mdl-chip__text">Sebastien Dumetz</span>
+        <span class="mdl-chip mdl-chip--contact mdl-color--accent">
+          <a href="https://github.com/sdumetz">
+            <img class="mdl-chip__contact" src="/data/ID.png"></img>
+            <span class="mdl-chip__text " style="color:white;font-weight:bold;">Sebastien Dumetz</span>
+          </a>
         </span>
 
-        <p>Co-founder of <a href="http://holusion.com">holusion</a>, Product manager. I create new hardware and software tools to change digital user experience.</p>
+        <p>Co-founder of <a href="http://holusion.com">holusion</a>, acting Product manager. I create new hardware and software tools to change digital user experience.</p>
+      </div>
+      <div>
+        <span class="mdl-chip mdl-chip--contact mdl-color--accent">
+          <img class="mdl-chip__contact" src="/data/Git-Icon-Black.png"></img>
+          <span class="mdl-chip__text " style="color:white;font-weight:bold;">Dev Projects</span>
+        </span>
+        <ul class="mdl-list">
+          {% include drawer_list_item.html
+             href="https://holusion.github.io/stingray"
+             icon="info"
+             title="Stingray"
+             tooltip="A real time video player"
+          %}
+          {% include drawer_list_item.html
+             href="https://github.com/Holusion/holusion.com"
+             icon="info"
+             title="holusion.com"
+             tooltip="holusion's website"
+          %}
+          {% include drawer_list_item.html
+             href="https://github.com/Holusion/node-thumbnail-manager"
+             icon="info"
+             title="node-thumbnail-manager"
+             tooltip="A xdg compliant thumbnail manager"
+          %}
+          {% include drawer_list_item.html
+             href="https://github.com/sdumetz/node-evdev"
+             icon="info"
+             title="node-evdev"
+             tooltip="An evdev events parser on nodejs to be used in electron apps"
+          %}
+        </ul>
       </div>
 
     </div>
