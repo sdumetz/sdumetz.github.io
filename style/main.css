@@ -27,6 +27,7 @@ html, body{
 .content-main{
   flex-grow:10;
   width:600px;
+  flex-shrink:1;
 }
 .content-drawer  {
   flex-grow:1;
