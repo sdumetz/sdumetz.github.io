@@ -7,9 +7,12 @@ html, body{
   font-family:"Roboto","Helvetica","Arial",sans-serif;
   min-height:100%;
   margin:0;
-
+  background:rgba(0,0,0,.1);
 }
 /* Main layout setup */
+main{
+  background:rgba(0,0,0,.05);
+}
 .container{
   display:flex;
   max-width:1200px;
@@ -26,8 +29,15 @@ html, body{
 
 .content-main{
   flex-grow:10;
-  width:600px;
+  min-width:300px;
+  flex-basis: 600px;
   flex-shrink:1;
+}
+.content-main>div{
+  padding:8px;
+}
+.content-main p {
+  text-align: justify;
 }
 .content-drawer  {
   flex-grow:1;
@@ -36,21 +46,25 @@ html, body{
 .content-drawer>div{
   padding:10px;
 }
+
+
+
 .navbar .mdl-layout__header, .mdl-layout__drawer-button >.material-icons {
   /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
   color: white;
 }
 .ribbon{
-  height:40vh;
   flex-shrink:0;
   background-color: #3F51B5;
   background: url("/data/header.jpg") center/cover;
+  height:200px;
+  height:40vh;
+  margin-bottom: 175px;
+  margin-bottom:-35vh;
+
 }
-.site-content{
-  margin-top:-35vh;
-  overflow:initial!important;
-}
+
 
 /* images cards */
 .mdl-card.image-card{
@@ -109,35 +123,41 @@ html, body{
 
 h1{
   color:rgb(33,150,243);
+  font-size:3em;
+  font-weight: 700;
 }
 h2{
   color:rgb(83,109,254);
+  font-size:2.5em;
+  font-weight:500;
 }
 h3{
   color: rgb(33,150,243);
+  font-size:2em;
 }
 h4{
   color: #FF5252;
   margin:0;
   padding-top:15px;
 }
-a{
-  color:#FF5722;
+/* Responsive tweaks */
+@media screen and (max-width: 768px ){
+  .content-main{
+  }
+  p{
+    font-size:16px;
+  }
 }
 .print-only{
   display:none;
 }
-.footer{
-  margin-top:25px;
-  padding:15px 0 15px 0;
-  background-color:#FF5722;
-  color:white;
+footer{
+  padding:10px;
 }
-.footer a{
-  color:white;
-}
-.main-content{
-  padding: 0 15px 0 15px;
+
+/* code formatting */
+pre.highlight{
+  overflow-x:auto;
 }
 
 .in{

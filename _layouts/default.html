@@ -23,7 +23,7 @@
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--no-desktop-drawer-button">
-      <header class="mdl-layout__header navbar">
+      <header class="mdl-layout__header mdl-layout__header--scroll navbar">
         <div class="mdl-layout__header-row">
           <!-- Title -->
           <span class="mdl-layout-title">Sebastien Dumetz</span>
@@ -42,7 +42,11 @@
           <a class="mdl-navigation__link" href="/">Home</a>
         </nav>
       </div>
-      {{content}}
+      <div class="ribbon">
+      </div>
+      <main class="mdl-layout__content site-content">
+        {{content}}
+      </main>
       <footer class="mdl-mini-footer mdl-color--accent">
           <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo ">Sebastien Dumetz 2015 - 2016</div>
