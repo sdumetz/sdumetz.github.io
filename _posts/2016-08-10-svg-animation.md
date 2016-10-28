@@ -1,5 +1,6 @@
 ---
 title: Animate a SVG with motion-path
+image: /data/img/world.svg
 ---
 
 One of the big wins of svg for the web is animation. It's not as important now that we have canvas that works for nearly everything, but there is one thing really easy with SVGs and a real pain with canvas : Moving an object along a path.

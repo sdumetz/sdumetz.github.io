@@ -79,6 +79,6 @@ You can visualize this greyscale data, it's already great and precise. There's a
 
 Just extract data from `controller.images()[1]` the same way we just did.
 
-We'll make a multiplication of our values, offsetted by a `STEREO` factor. This will naturally filter out dots that are not on our target height. Thee higher the STEREO diff, the lower the points.
+We'll make a multiplication of our values, offsetted by a `STEREO` factor. This will naturally filter out dots that are not on our target height. The higher the STEREO diff, the lower the points.
 
-This is **NOT** fool-proof. Imagine you set a diff of 60 nad got 2 fingers distant of 60px. It will be well correlated and maybe not at the target height. However like I said, we're looking for movement, not spacial interpolation precision.
+This is **NOT** fool-proof. Imagine you set a diff of 60 and got 2 fingers distant of 60px: It will be well correlated and maybe not at the target height. However like I said, we're looking for movement, not spacial interpolation precision.

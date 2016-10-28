@@ -1,5 +1,6 @@
 ---
 title: How to read a video Backward (Part 1)
+image: /data/stingray-logo.png
 ---
 
 I've recently faced an unexpected challenge in trying to read (decode & display) a video backward at normal speed. For someone who don't know shit about video encoding, it looks like it should be as straightforward as calling `video.previousFrame()`... except it's not. Let's see why and how we worked around this to create a new generation of holographic applications.
