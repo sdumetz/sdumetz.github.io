@@ -1,5 +1,7 @@
 lsi: false
 url: https://sdumetz.github.io
+title: Sebastien Dumetz's Blog
+description: A blog on my various creation experiences
 source: .
 exclude:
   - node_modules
