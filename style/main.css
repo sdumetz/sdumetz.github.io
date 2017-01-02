@@ -13,6 +13,9 @@ html, body{
 main{
   background:rgba(0,0,0,.05);
 }
+.mdl-layout__content.site-content{
+  overflow:visible;
+}
 .container{
   display:flex;
   max-width:1200px;
@@ -20,6 +23,7 @@ main{
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .content  {
   padding:10px 10px 10px 0px;
 }
