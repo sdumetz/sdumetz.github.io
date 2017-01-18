@@ -11,15 +11,21 @@ layout: default
   </div>
   <div class="content content-drawer">
     <div class=" mdl-color--white mdl-shadow--4dp">
-      <div class="">
+      <div itemscope itemtype="http://schema.org/Person" class="">
         <span class="mdl-chip mdl-chip--contact mdl-color--accent">
           <a href="https://github.com/sdumetz">
             <img class="mdl-chip__contact" src="/data/ID.png"></img>
-            <span class="mdl-chip__text " style="color:white;font-weight:bold;">Sebastien Dumetz</span>
+            <span  itemprop="name" class="mdl-chip__text " style="color:white;font-weight:bold;">Sebastien Dumetz</span>
+            <meta itemprop="gender" itemtype="http://schema.org/Male"/>
           </a>
         </span>
 
-        <p>Co-founder of <a href="http://holusion.com">holusion</a>, acting Product manager. I create new hardware and software tools to change digital user experience.</p>
+        <p>
+          Co-founder of
+          <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+            <a itemprop="name" href="http://holusion.com">holusion</a>
+          </span>
+          , acting <span itemprop="jobTitle">Product manager</span>. I create new hardware and software tools to change digital user experience.</p>
       </div>
       <div>
         <span class="mdl-chip mdl-chip--contact mdl-color--accent">
