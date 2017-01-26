@@ -5,7 +5,6 @@ image: /data/posts/reduced_speed.svg
 
 I've fiddled a bit recently with self-made HTML5 video players. While it's easy to use and now widely compatible, I've had some trouble encoding videos. So here is my cheat sheet for mobile-first video distribution in 2017, including an in-depth look into mp4/webm performance.
 
-{% include image_card.html image="/data/posts/reduced_speed.svg" alt="Reduced speed road sign" text="Let's eat your CPU boy" %}
 
 ## Encoding commands
 
