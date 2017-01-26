@@ -1,8 +1,11 @@
 ---
 title: Encoding videos for the web in 2017
+image: /data/posts/reduced_speed.svg
 ---
 
 I've fiddled a bit recently with self-made HTML5 video players. While it's easy to use and now widely compatible, I've had some trouble encoding videos. So here is my cheat sheet for mobile-first video distribution in 2017, including an in-depth look into mp4/webm performance.
+
+{% include image_card.html image="/data/posts/reduced_speed.svg" alt="Reduced speed road sign" text="Let's eat your CPU boy" %}
 
 ## Encoding commands
 
@@ -36,12 +39,12 @@ However, encoding in vp8 is no longer a great trouble. While most earlier guides
   avconv -f image2 -i path/to/frame-%04d.png -c:v libvpx -c:a libvorbis -qmin 20 -qmax 30 -threads auto  output_file.webm
 {% endhighlight %}
 
-Now is it worth it? Let's check the rate/distortion gain. Unlike previous empirical results [from me]({% post_url 2016-10-06-how-to-read-a-video-backward-2 %}) and [others](http://www.streamingmedia.com/articles/editorial/featured-articles/first-look-h.264-and-vp8-compared-67266.aspx), I'll try to go *scientific* here. While we're at it, I'll also test vp9 encoding.
-
-
 ## Encoding choice
 
-OK. Since we're serious about it, let's compare a few things :
+Now is it worth it to replace good ol' h.264 ? Let's check the rate/distortion gain. Unlike previous empirical results [from me]({% post_url 2016-10-06-how-to-read-a-video-backward-2 %}) and [others](http://www.streamingmedia.com/articles/editorial/featured-articles/first-look-h.264-and-vp8-compared-67266.aspx), I'll try to go *scientific* here. While we're at it, I'll also test vp9 encoding.
+
+
+Since we're serious about it, let's compare a few things :
 
 - H.264 main profile 31
 - H.264 high profile 41
@@ -77,8 +80,10 @@ VP9 (2 p) : 1471kB . PSNR : 15908.0548
 
 ### Conclusion
 
-Providing a bazilion of fallbacks is no longer required if you target mobile devices, which tends to have up to date browsers and can't be older than 2006, or are not meant to play video anyway.
+Providing a bazilion of fallbacks is no longer required if you target mobile devices, which tends to have up to date browsers and can't be older than 2006 (obviously...), or are not meant to play video anyway.
 
-a fallback to vp8/vp9 encoded video could provide some meaningfull bonus, but is by no means a no-brainer.
+a fallback to vp8/vp9 encoded video could provide some meaningfull bonus, but is by no means a no-brainer. It depends how much your viewers will rely on seek capacities, for example.
 
 Those measures were enough to convince me to drop ogv support make webm secondary in my [online video service](https://pixel.holusion.com).
+
+**To be continued** : How good are VP8/VP9 when the user seeks a specific time?
