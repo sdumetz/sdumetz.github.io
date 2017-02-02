@@ -2,7 +2,8 @@
 layout: front
 title: Blog Posts
 ---
-
+<section id="posts-index">
 {% for post in site.posts %}
     {% include post_abstract.html content=post %}
 {% endfor %}
+</section>

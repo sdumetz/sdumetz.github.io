@@ -4,9 +4,7 @@
   lang="en"
   xmlns:cc="http://creativecommons.org/ns#"
   xmlns:og="http://opengraphprotocol.org/schema/"
-  {%if page.excerpt %} itemscope
-  itemtype="http://schema.org/Article"
-  {% endif %}
+  itemscope itemtype="http://schema.org/Blog"
 >
   <head>
     <meta charset="utf-8">
@@ -61,13 +59,70 @@
       <div class="ribbon">
       </div>
       <main class="mdl-layout__content site-content">
-        {{content}}
+
+        <div class="container">
+          <div  class="mdl-color-text--grey-800 content content-main">
+            <div class="mdl-color--white mdl-shadow--4dp">
+              {{content}}
+            </div>
+          </div>
+          <div class="content content-drawer">
+            <div class=" mdl-color--white mdl-shadow--4dp">
+              <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="">
+                <span class="mdl-chip mdl-chip--contact mdl-color--accent">
+                  <a href="https://github.com/sdumetz">
+                    <img class="mdl-chip__contact" src="/data/ID.png"></img>
+                    <span  itemprop="name" class="mdl-chip__text " style="color:white;font-weight:bold;">Sebastien Dumetz</span>
+                    <meta itemprop="gender" itemtype="http://schema.org/Male"/>
+                  </a>
+                </span>
+
+                <p>
+                  Co-founder of
+                  <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                    <a itemprop="name" href="http://holusion.com">holusion</a>
+                  </span>
+                  , acting <span itemprop="jobTitle">Product manager</span>. I create new hardware and software tools to change digital user experience.</p>
+              </div>
+              <div>
+                <span class="mdl-chip mdl-chip--contact mdl-color--accent">
+                  <img class="mdl-chip__contact" src="/data/Git-Icon-Black.png"></img>
+                  <span class="mdl-chip__text " style="color:white;font-weight:bold;">Dev Projects</span>
+                </span>
+                <ul class="mdl-list">
+                  {% include drawer_list_item.html             href="https://holusion.github.io/stingray" icon="info"  title="Stingray" tooltip="A real time video player"         %}
+                  {% include drawer_list_item.html             href="https://github.com/Holusion/holusion.com" icon="info" title="holusion.com" tooltip="holusion's website"       %}
+                  {% include drawer_list_item.html             href="https://github.com/Holusion/node-thumbnail-manager" icon="info" title="node-thumbnail-manager" tooltip="A xdg compliant thumbnail manager" %}
+                  {% include drawer_list_item.html             href="https://github.com/sdumetz/node-evdev" icon="info" title="node-evdev" tooltip="An evdev events parser on nodejs to be used in electron apps" %}
+                  {% include drawer_list_item.html             href="https://github.com/sdumetz/aptly-web-ui" icon="info" title="aptly web ui" tooltip="A web interface for aptly" %}
+
+                </ul>
+              </div>
+              <div>
+                <span class="mdl-chip mdl-chip--contact mdl-color--accent">
+                  <a type="application/atom+xml" href="https://sdumetz.github.io/feed.xml">
+                    <span class="mdl-chip__contact"><svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24">
+                      <use xlink:href="/data/icons-combined.svg#icon-rss"></use>
+                    </svg></span>
+                    <span class="mdl-chip__text " style="color:white;font-weight:bold;">Atom feed</span>
+                  </a>
+                </span>
+                <span class="mdl-chip mdl-chip--contact mdl-color--accent">
+                  <a href="https://twitter.com/sdumetz">
+                    <img class="mdl-chip__contact" src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" width="24px" height="24px">
+                    <span class="mdl-chip__text " style="color:white;font-weight:bold;">@sdumetz</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="mdl-mini-footer mdl-color--accent">
           <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo ">Sebastien Dumetz 2015 - 2016</div>
             <ul class="mdl-mini-footer__link-list">
-              <li>All content is under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC. Attribution ShareAlike</a></li>
+              <li>All content is under <a itemprop="license" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC. Attribution ShareAlike</a></li>
            </ul>
          </div>
 
