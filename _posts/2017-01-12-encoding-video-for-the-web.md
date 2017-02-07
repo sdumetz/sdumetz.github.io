@@ -1,6 +1,6 @@
 ---
 title: Encoding videos for the web in 2017
-image: /data/posts/reduced_speed.svg
+image: /data/posts/reduced_speed.png
 ---
 
 I've fiddled a bit recently with self-made HTML5 video players. While it's easy to use and now widely compatible, I've had some trouble encoding videos. So here is my cheat sheet for mobile-first video distribution in 2017, including an in-depth look into mp4/webm performance.
