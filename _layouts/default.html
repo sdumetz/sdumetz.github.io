@@ -30,9 +30,12 @@
     {% if page.image %}
       <meta name="twitter:image" content="{{site.url}}{{page.image}}">
       <meta property="og:image" content="{{site.url}}{{page.image}}"/>
+    {% else %}
+      <meta name="twitter:image" content="{{site.url}}/data/header.jpg">
+      <meta property="og:image" content="{{site.url}}/data/header.jpg"/>
     {% endif %}
     <link rel="alternate" type="application/atom+xml" href="https://sdumetz.github.io/feed.xml" title="Sebastien Dumetz Atom feed">
-    <link rel="canonical" href="https://sdumetz.github.io/{{page.url}}">
+    <link rel="canonical" href="{{site.url}}{{page.url }}">
     {% include scripts.html %}
   </head>
   <body>
