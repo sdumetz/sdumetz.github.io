@@ -26,7 +26,7 @@ hereafter you'll find a complete description of their meaning.
 
 in h.264 syntax, profile is usually given as a string. For example using libav or ffmpeg, we'll set it with `-profile:v high`. libx264's code has a simple if chain to parse those (in `common/common.c`)
 
-{%highlight c %}
+{% highlight c %}
     static int profile_string_to_int( const char *str )
     {
         if( !strcasecmp( str, "baseline" ) )
@@ -43,11 +43,11 @@ in h.264 syntax, profile is usually given as a string. For example using libav o
             return PROFILE_HIGH444_PREDICTIVE;
         return -1;
     }
-{%endhighlight %}
+{% endhighlight %}
 
 
 We can get the corresponding *integer* in `common/set.h`
-{%highlight c %}
+{% highlight c %}
     enum profile_e
     {
         PROFILE_BASELINE = 66,
@@ -57,7 +57,7 @@ We can get the corresponding *integer* in `common/set.h`
         PROFILE_HIGH422 = 122,
         PROFILE_HIGH444_PREDICTIVE = 244,
     };
-{%endhighlight}
+{% endhighlight %}
 
 so here is the complete translation from profile string to **profile_idc**
 
