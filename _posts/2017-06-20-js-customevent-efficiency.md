@@ -91,7 +91,7 @@ To be efficient, the browser does not repaint until *enough* time has elapsed OR
 | update       (x1000) | 4ms  |
 | query+update (x1000) | 472ms|
 
-Ouch.
+**Ouch.**
 
 What does it means for our little listener? If it does **ANY** DOM query, it's going to take ~30ms to complete (depending on page's complexity).
 
