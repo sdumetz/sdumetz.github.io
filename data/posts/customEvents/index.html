@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+
+<body>
+  <div id=results></div>
+  <div id="content">
+  </div>
+  <script>
+    var res = document.getElementById("results");
+    var content = document.getElementById("content");
+    /* The reference functions */
+    function dispatchEvent(docElement,detail){
+      docElement.dispatchEvent(new CustomEvent("foo",{detail:detail}));
+    }
+
+    function listenEvent(docElement,fn){
+      docElement.addEventListener("foo",fn);
+      return docElement.removeEventListener.bind(docElement,"foo",fn);
+    }
+
+
+    var iterations = 10000;
+    var i=0;
+    var els = [];
+    for (i=0; i <iterations; i++){
+      els[i] = document.createElement("DIV");
+    }
+    function benchDoc(callback){
+      var i;
+      var countReceived = 0;
+      var start = Date.now();
+      var list = []; //To store unsubscribe
+      for (i=0; i <iterations; i++){
+        list[i] = listenEvent(document, function(){
+          if (++countReceived == iterations){
+            res.innerHTML += "Done in : "+(Date.now()-start)+" ms";
+            unsub(list);
+            callback();
+          }
+        });
+      }
+      res.innerHTML += "<p>Registration : "+(Date.now()-start)+" ms</p>"
+      start=Date.now();
+      dispatchEvent(document, "no one care");
+    }
+    function benchList(callback){
+      var i;
+      var countReceived = 0;
+      var start = Date.now();
+
+      var list = []; //To store unsubscribe
+      for (i=0; i <iterations; i++){
+        list[i] = listenEvent(els[i], function(){
+          if (++countReceived == iterations){
+            res.innerHTML += "Done in : "+(Date.now()-start)+" ms";
+            unsub(list);
+            callback();
+          }
+        });
+      }
+      res.innerHTML += "<p>Registration : "+(Date.now()-start)+" ms</p>"
+      start=Date.now();
+      for (i=0; i <iterations; i++){
+        dispatchEvent(els[i], "no one care");
+      }
+    }
+    function unsub(list){
+      var start=Date.now();
+      for (i=0; i <iterations; i++){
+        list[i]();
+      }
+      res.innerHTML += "<p>Unsubscribe : "+(Date.now()-start)+" ms</p>";
+
+    }
+    res.innerHTML +="<p><b>On root document</b></p>";
+    benchDoc(function(){
+      res.innerHTML +="<p><b>On other documents</b></p>";
+      benchList(function(){});
+    });
+
+  </script>
+</body>
+</html>

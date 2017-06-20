@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+
+<body>
+  <div id=results></div>
+  <div id="content">
+  </div>
+  <script>
+    var res = document.getElementById("results");
+    var content = document.getElementById("content");
+    var els = [];
+    var iterations = 1000;
+    var start;
+    for (var i=0; i<iterations;i++){
+      els.push(document.createElement("DIV"));
+      content.appendChild(els[i]);
+    }
+    start = Date.now();
+    els.forEach(function(e,idx){
+      e.innerHTML = "hello, unknown width Number"+idx;
+    })
+    res.innerHTML += "<p>Time without query: "+(Date.now()-start)+"</p>";
+    els.forEach(function(e,idx){
+      e.innerHTML = "hello, "+e.clientWidth +"width Number"+idx;
+    })
+    res.innerHTML += "<p>Time with query: "+(Date.now()-start)+"</p>";
+    content.style.display = "none";
+  </script>
+</body>
+</html>
