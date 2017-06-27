@@ -1,5 +1,6 @@
 ---
 title: Handle linux signals in Unity3D
+image: /data/posts/linux_signals.png
 ---
 
 Unity3D's portable runtime based on [Mono](http://www.mono-project.com/) has become a great "write once run everywhere" tool for interactive apps or video games. However stable it is, there is always some edge cases to portability. The handling of SIGTERM, SIGINT, etc... linux (well, [POSIX](https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals)) signals are one of them.
