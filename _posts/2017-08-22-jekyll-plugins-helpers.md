@@ -6,9 +6,15 @@ image: /data/posts/jekyll-plugins.png
 I use [Jekyll](https://jekyllrb.com) a lot at work for various static sites. Throughout it, I've developped some handy [plugins](https://github.com/sdumetz/jekyll-inline-svg). While Jekyll's plugins system is easy and powerful to use, the doc lacks some info on helpers functions, right_way&#8482; to parse arguments, etc...
 Here's a short list, half for myself to remember, half for others to learn.
 
-# Helper functions
+## Class documentation
 
-## lookup_variable
+While [jekyll](https://jekyllrb.com) is great, developpers might like [rubydoc](http://www.rubydoc.info/gems/jekyll)'s page to get a complete Class reference on Jekyll's internals. The [Utils](http://www.rubydoc.info/gems/jekyll/Jekyll/Utils) class has some useful methods. Similarly, [Liquid](http://www.rubydoc.info/gems/liquid) gem's docs are not advertised in any of the mainstream sites. It reveals priceless when digging into templates internals.
+
+The `Liquid` class has some useful constants, like `Liquid::QuotedFragment` which will match any quoted string
+
+## Helper functions
+
+### lookup_variable
 
 `lookup_variable(name, context)` is the only export of [Jekyll::LiquidExtensions](https://github.com/jekyll/jekyll/blob/master/lib/jekyll/liquid_extensions.rb), and is a handy shortcut to interpret liquid variables at render time.
 
@@ -43,7 +49,7 @@ end
 
 It will replace anything enclosed in `{{}}` by it's variable value within context. If the variable does not exists, it outputs the variable's name.
 
-## sanitized_path
+### sanitized_path
 
 Jekyll require you to "jail" paths to the site's source directory. `Jekyll.sanitized_path(base, file)` will effectively ensure this. Complete behaviour tests are available for review [here](https://github.com/jekyll/jekyll/blob/73419cb374be1b8f45818a23116cf71db93549ce/test/test_path_sanitization.rb). Practical usage inside your plugin will look like this :
 ```
@@ -54,11 +60,11 @@ end
 ```
 Thus, `/foo.txt`, `foo.txt` will resolve relative to the site's source dir. Furthermore, `../foo.txt` and `/../foo.txt` will also work. I don't see why you'd do that but it's always good to have some layer of safety.
 
-# Testing
+## Testing
 
 Greatly inspired by work done by others on [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap).
 
-## Integration testing
+### Integration testing
 
 Always check your code actually does something out there in the wild. Fortunately, it's easy to do just that. Create a `fixture/` directory with the required files :
 
