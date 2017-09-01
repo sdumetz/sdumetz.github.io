@@ -7,7 +7,7 @@ exclude:
   - node_modules
   - src
 highlighter: rouge
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
 defaults:
