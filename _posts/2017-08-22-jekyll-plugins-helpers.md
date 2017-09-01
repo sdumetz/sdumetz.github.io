@@ -103,3 +103,70 @@ end
 ```
 
 Then add test cases to verify if output is *as expected*.
+
+## Hooks
+
+Documentation on [Hooks](http://www.rubydoc.info/gems/jekyll/Jekyll/Hooks) is sparse and it's a rather underused feature. In my experience, nearly anything you'd want to do with a hook can be done with a template. However :
+
+**Hooks can dramatically speed up your rendering**
+
+They require no context switch, no bouncing from Liquid components : pure ruby logic. I had this snippet to get a page's language depending on its url :
+
+{% highlight Liquid %}{%raw%}
+    {% unless lang %}
+      {% if page.lang %}
+        {% assign lang = page.lang %}
+      {% elsif page.url contains "/fr" %}
+        {% assign lang = "fr" %}
+      {% elsif page.url contains "/en" %}
+        {% assign lang = "en" %}
+      {% else %}
+        {% assign lang = "fr" %}
+      {% endif %}
+    {% endunless %}
+{% endraw %}{% endhighlight %}
+
+This simple snippet was adding 2 seconds of render time on every update, with a site of ~100 pages.
+
+The exact same thing in ruby would take a negligible amount of time :
+{% highlight ruby %}
+
+re = /^\/(?<lang>fr|en)\/(.*)$/
+Jekyll::Hooks.register :documents, :pre_render, priority: "high" do |content, doc|
+  url = doc.page["url"]
+  filepath = doc.page["relative_path"]
+  if !  doc.page.key? "lang"
+    match = re.match(url)
+    if match
+      doc.page["lang"] = match["lang"]
+    else
+      doc.page["lang"] = "fr"
+    end
+  end
+end
+{% endhighlight %}
+
+****
+
+Jekyll's doc already disclose the [scopes and events](https://jekyllrb.com/docs/plugins/#hooks) available for use. A few precisions :
+
+One can not set pages variables in the `:post_init` phase : Those hooks use the `Jekyll:Document`, `Jekyll:Site`, etc... Objects. Trying to do so will yield an error :
+
+```
+    Error:  undefined method `[]=' for #<Jekyll::Document:0x00000002fcedb8>
+```
+
+On the other hand, `:pre_render` hooks are using [Jekyll::Drops::DocumentDrop](http://www.rubydoc.info/gems/jekyll/Jekyll/Drops/DocumentDrop) and equivalents, which set the `[]=` operator.
+
+`:documents` hooks have access to a "content" variable, `|content,doc|`. It's defined as "NO CONTENT" in early hook.
+
+The `page` variable can be modified in `:documents, :pre_render` hooks using thissyntax : `doc.page["foo"]="bar"`, and will be available in templates as `{{page.foo}}`.
+The `site` variable can be modified at any stage using `site.config["foo"] = "bar"`. Site is generally still accessible in other hooks as a child of the main object.
+
+{% highlight ruby %}
+Jekyll::Hooks.register :documents, :pre_render, priority: "high" do |content, doc|
+  url = doc.page["url"]
+  doc.page["foo"] = "hello world"
+  # ...
+end
+{% endhighlight %}
