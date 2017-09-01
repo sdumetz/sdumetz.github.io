@@ -20,7 +20,7 @@ The `Liquid` class has some useful constants, like `Liquid::QuotedFragment` whic
 
 Here is the example code for a `Liquid::Tag` :
 
-```
+{% highlight ruby %}
 require 'jekyll/liquid_extensions'
 module Jekyll
   module Tags
@@ -45,9 +45,9 @@ module Jekyll
     end
   end
 end
-```
+{% endhighlight %}
 
-It will replace anything enclosed in `{{}}` by it's variable value within context. If the variable does not exists, it outputs the variable's name.
+It will replace anything enclosed in "{% raw %}{{ }} {% endraw %}" by it's variable value within context. If the variable does not exists, it outputs the variable's name.
 
 ### sanitized_path
 
